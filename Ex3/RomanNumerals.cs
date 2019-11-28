@@ -23,6 +23,100 @@ namespace Exercises.Ex3
 			return DecimalToRoman(value);
 		}
 
+		#region Operators
+
+		#region +
+
+		public static RomanNumerals operator +(RomanNumerals n1, RomanNumerals n2)
+		{
+			return new RomanNumerals(n1.value + n2.value);
+		}
+
+		public static RomanNumerals operator +(RomanNumerals n1, int n2)
+		{
+			return new RomanNumerals(n1.value + n2);
+		}
+
+		public static RomanNumerals operator +(int n2, RomanNumerals n1)
+		{
+			return new RomanNumerals(n1.value + n2);
+		}
+
+		#endregion
+
+		#region -
+
+		public static RomanNumerals operator -(RomanNumerals n1, RomanNumerals n2)
+		{
+			return new RomanNumerals(n1.value - n2.value);
+		}
+
+		public static RomanNumerals operator -(RomanNumerals n1, int n2)
+		{
+			return new RomanNumerals(n1.value - n2);
+		}
+
+		public static RomanNumerals operator -(int n2, RomanNumerals n1)
+		{
+			return new RomanNumerals(n2 - n1.value);
+		}
+
+		#endregion
+
+		#region *
+
+		public static RomanNumerals operator *(RomanNumerals n1, RomanNumerals n2)
+		{
+			return new RomanNumerals(n1.value * n2.value);
+		}
+
+		public static RomanNumerals operator *(RomanNumerals n1, int n2)
+		{
+			return new RomanNumerals(n1.value * n2);
+		}
+
+		public static RomanNumerals operator *(int n2, RomanNumerals n1)
+		{
+			return new RomanNumerals(n1.value * n2);
+		}
+
+		#endregion
+
+		#region /
+
+		public static RomanNumerals operator /(RomanNumerals n1, RomanNumerals n2)
+		{
+			return new RomanNumerals(n1.value / n2.value);
+		}
+
+		public static RomanNumerals operator /(RomanNumerals n1, int n2)
+		{
+			return new RomanNumerals(n1.value / n2);
+		}
+
+		public static RomanNumerals operator /(int n2, RomanNumerals n1)
+		{
+			return new RomanNumerals(n2 / n1.value);
+		}
+
+		#endregion
+
+		#region Conv
+
+		public static implicit operator RomanNumerals(int number)
+		{
+			return new RomanNumerals(number);
+		}
+
+		public static explicit operator int(RomanNumerals number)
+		{
+			return number.value;
+		}
+
+		#endregion
+
+		#endregion
+
 		private static string DecimalToRoman(int val)
 		{
 			var number = Math.Abs(val);
@@ -85,5 +179,6 @@ namespace Exercises.Ex3
 
 			return totalValue + subTotalValue;
 		}
+
 	}
 }

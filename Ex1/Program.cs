@@ -9,23 +9,23 @@ namespace Exercises.Ex1
 		{
 			var elements = new List<int>();
 
-			for (/*uzupełnij*/)
+			for (int i = 0; i < 1000; i += i * 2 + (++i))
 			{
 				elements.Add(i);
 			}
 
-			/*uzupełnij*/
+			foreach(int element in elements)
 			{
 				Console.Write("{0},", element);
 			}
 
 			Console.WriteLine();
 
-			var enumerator = /*uzupełnij*/
+			var enumerator = elements.GetEnumerator();
 
-			while (/*uzupełnij*/)
+			while (enumerator.MoveNext())
 			{
-				Console.Write(/*uzupełnij*/);
+				Console.Write("{0}\n", enumerator.Current % 7 == 0 ? enumerator.Current : -enumerator.Current % 3);
 			}
 
 			Console.ReadKey();
