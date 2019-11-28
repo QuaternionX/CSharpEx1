@@ -1,0 +1,14 @@
+﻿W tym ćwiczeniu musisz uzupełnić brakujące fragmenty kodu, tak by program działał poprawnie. Możesz dodawać kod tylko w wyznaczonych miejscach.
+Działanie programu:
+Program tworzy kolekcję liczb całkowitych należących do przedziału 0-999, wykorzystując do tego ciąg, którego kolejne elementy mają wzór:
+n=x*2+(x+1)
+gdzie x jest poprzednim elementem ciągu. Pierwszy element ciągu to 0.
+Utworzywszy kolekcję, wypisuje wszystkie elementy w jednej linii, oddzielając je przecinkami.
+Na koniec program dla każdego elementu wypisuje w kolejnych liniach:
+-wartość elementu, jeżeli jest podzielny przez 7 bez reszty
+-w każdym innym przypadku wynik operacji modulo 3 pomnożony przez minus jeden
+
+Przydatne:
+Enumerator
+foreach
+modulo
